@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑白俄羅斯方塊</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 遊戲主畫面 -->
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="300" height="600"></canvas>
+            <div id="gameOverScreen" class="overlay hidden">
+                <h2>GAME OVER</h2>
+                <p>SCORE: <span id="finalScore">0</span></p>
+                <button id="restartBtn">RESTART (ENTER)</button>
+            </div>
+            <div id="startScreen" class="overlay">
+                <h2>TETRIS</h2>
+                <button id="startBtn">START (ENTER)</button>
+            </div>
+        </div>
+        
+        <!-- 側邊資訊欄 -->
+        <div class="sidebar">
+            <div class="info-box">
+                <h3>NEXT</h3>
+                <canvas id="nextCanvas" width="120" height="120"></canvas>
+            </div>
+            <div class="info-box">
+                <h3>SCORE</h3>
+                <p id="score">0</p>
+            </div>
+            <div class="info-box">
+                <h3>LEVEL</h3>
+                <p id="level">1</p>
+            </div>
+            <div class="info-box">
+                <h3>LINES</h3>
+                <p id="lines">0</p>
+            </div>
+            
+            <div class="controls-info">
+                <p>↑ : ROTATE</p>
+                <p>← → : MOVE</p>
+                <p>↓ : SOFT DROP</p>
+                <p>SPACE : HARD DROP</p>
+                <button id="soundBtn" class="toggle-btn">SOUND: ON</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
